@@ -6,7 +6,7 @@ const url='https://randomuser.me/api/?results=1000'
  function fetchaction(){
   return(dispatch) => {
     axios.get(url)
-      .then((response)=>{ console.log(response); dispatch(success(response)) })
+      .then((response)=>{ console.log(response); dispatch(success(response.data)) })
       .catch((response)=>{return Promise.reject(response)} )
   }
   function success(user) { return {type:FETCHUSER.FETCH_USER_SUCCESS, user}}

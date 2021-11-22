@@ -1,7 +1,6 @@
 import {FETCHUSER} from '../constants'
 
 export function FetchuserReducer (state={},action){
-	console.log("shaba",action)
 	switch (action.type){
 	    case FETCHUSER.FETCHUSER :
 	      return {
